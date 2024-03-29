@@ -6,7 +6,7 @@ int cmp_count = 0;
 int mov_count = 0;
 int n;
 
-void input() 
+void input()
 {
 	while (true) {
 		cout << "masukan panjang element array : ";
@@ -50,6 +50,11 @@ void q_sort(int low, int high)
 
 	while (i <= j)
 	{
-		while ((arr[i] <=pivot ) && i<= high))
+		while ((arr[i] <= pivot) && i <= high))
+		{
+			i++;
+			cmp_count++;
+		}
+
 	}
 }
