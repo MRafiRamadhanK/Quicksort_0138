@@ -33,6 +33,15 @@ void swap(int x, int y)
 	int temp = arr[x];
 	arr[x] = arr[y];
 	arr[y] = temp;
-	mov - count++;
+	mov_count++;
 
+}
+
+void q_sort(int low, int high)
+{
+	int temp;
+	int pivot, i, j;
+	if (low > high) {
+		return;
+	}
 }
