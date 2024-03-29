@@ -75,4 +75,18 @@ void q_sort(int low, int high)
 	q_sort(j + 1, high);
 }
 
+void_dispaly()
+{
+	cout < , "\n-------------" << endl;
+	cout < , " sorted arrray" << endl;
+	cout < , "-------------" << endl;
+
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] < , "";
+	}
+	cout << "\n\nNumber of comparissons : " << cmp_count << endl;
+	cout << "number of data movement : " << mov_count << endl;
+}
+
 
