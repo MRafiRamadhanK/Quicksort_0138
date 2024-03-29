@@ -8,11 +8,12 @@ int n;
 
 void input()
 {
-	while (true) {
+	while (true) 
+	{
 		cout << "masukan panjang element array : ";
 		cin >> n;
 
-		if (n < +20)
+		if (n <= 20)
 			break;
 		else
 			cout << "\nMaksimum panjang array adalah 20" << endl;
@@ -24,7 +25,7 @@ void input()
 	for (int i = 0; i < n; i++)
 	{
 		cout << "<" << (i + 1) << ">";
-		cin >> [i];
+		cin >> arr[i];
 	}
 }
 
@@ -37,7 +38,7 @@ void swap(int x, int y)
 
 }
 
-void q_sort(int low, int high)
+void q_short(int low, int high)
 {
 	int temp;
 	int pivot, i, j;
@@ -45,12 +46,12 @@ void q_sort(int low, int high)
 		return;
 	}
 	pivot = arr[low];
-	i = low++1;
+	i = low + 1;
 	j = high;
 
 	while (i <= j)
 	{
-		while ((arr[i] <= pivot) && i <= high))
+		while ((arr[i] <= pivot) && (i <= high))
 		{
 			i++;
 			cmp_count++;
@@ -71,22 +72,39 @@ void q_sort(int low, int high)
 	{
 		swap(low, j);
 	}
-	q_sort(low, j - 1);
-	q_sort(j + 1, high);
+	q_short(low, j - 1);
+	q_short(j + 1, high);
 }
 
-void_dispaly()
+void display()
 {
-	cout < , "\n-------------" << endl;
-	cout < , " sorted arrray" << endl;
-	cout < , "-------------" << endl;
+	cout <<"\n-------------" << endl;
+	cout << "sorted arrray" << endl;
+	cout << "-------------" << endl;
 
 	for (int i = 0; i < n; i++)
 	{
-		cout << arr[i] < , "";
+		cout << arr[i] << " ";
 	}
-	cout << "\n\nNumber of comparissons : " << cmp_count << endl;
+	cout << "\n\nNumber of comparasions : " << cmp_count << endl;
 	cout << "number of data movement : " << mov_count << endl;
 }
 
+int main()
+{
+	char ch;
+	do {
+		input();
+		q_short(0, n - 1);
+		display();
+		cout << "\n\nDo you want to continue ? (y/n) : ";
+		cin >> ch;
+		if (ch == 'n' || ch == 'n')
+			break;
 
+		system("pause");
+		system("cls");
+
+	} while (true);
+	return 0;
+}
