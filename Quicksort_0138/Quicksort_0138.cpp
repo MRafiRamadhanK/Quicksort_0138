@@ -59,7 +59,7 @@ void q_sort(int low, int high)
 		while ((arr[j] > pivot) && (j >= low))
 		{
 			j--;
-			cmp_count++;
+			cmp_count++; 
 		}
 	}
 }
